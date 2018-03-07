@@ -1,0 +1,11 @@
+ Node *current = new node;
+ current=head;
+    int count = 0; /* the index of the node we're currently
+                  looking at */
+    while (current != NULL)
+    {
+       if (count == index)
+          return(current->data);
+       count++;
+       current = current->next;
+    }
