@@ -1,0 +1,14 @@
+int get_middle()
+  {
+  	node *slow=new node;
+  	node *fast=new node;
+  	slow=head;
+  	fast=head;
+  	while(fast!=NULL && fast->next!=NULL)
+  	{
+  		fast=fast->next->next;
+  		slow=slow->next;
+	  }
+	return slow->data;  
+  }
+//for the even case it prints the (n/2+1)th element
