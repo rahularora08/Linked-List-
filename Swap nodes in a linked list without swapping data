@@ -1,0 +1,40 @@
+void swap_nodes(int x,int y)
+  { 
+  if(x==y)
+  return;
+  node *prevX=new node;
+  node *curX=new node;
+  prevX=NULL;
+  curX=head;
+  while(curX && curX->data!=x)
+  {
+  	prevX=curX;
+  	curX=curX->next;
+  }
+  node *prevY=new node;
+  node *curY=new node;
+  prevY=NULL;
+  curY=head;
+  while(curY && curY->data!=y)
+  {
+  	prevY=curY;
+  	curY=curY->next;
+  }
+  if (curX == NULL || curY == NULL)
+  return;
+  if(prevX!=NULL)
+  {
+  	prevX->next=curY;
+  	
+  }
+  else
+  head=curY;
+  if(prevY!=NULL)
+  prevY->next=curX;
+  else
+  head=curX;
+  node *temp=new node;
+  temp=curY->next;
+  curY->next=curX->next;
+  curX->next=temp;
+  }
