@@ -1,0 +1,12 @@
+int count(int n)
+{
+    node   *current = head;
+    int count = 0;
+    while (current != NULL)
+    {
+        if (current->data == n)
+           count++;
+        current = current->next;
+    }
+    return count;
+}
