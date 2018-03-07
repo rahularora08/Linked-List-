@@ -1,0 +1,33 @@
+METHOD 1
+void print_from_end(int n)
+{
+for (i = 1; i < len-n+1; i++)
+       temp = temp->next;
+ 
+    return  temp->data;
+    }
+METHOD 2
+void printNthFromLast(int n)
+{
+   node *main_ptr = head;
+   node *ref_ptr = head;
+ 
+  int count = 0;
+  if(head != NULL)
+  {
+     while( count < n )
+     {
+       
+        ref_ptr = ref_ptr->next;
+        count++;
+     } 
+ 
+     while(ref_ptr != NULL)
+     {
+        main_ptr = main_ptr->next;
+        ref_ptr  = ref_ptr->next;
+     }
+     return main_ptr->data;
+  }
+}
+    
