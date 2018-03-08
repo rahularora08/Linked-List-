@@ -1,6 +1,7 @@
 void loop()
-{node *slow,*fast=new node;
-slow=head;
+{
+        node *slow,*fast=new node;
+        slow=head;
   	fast=head;
   	while(slow && fast && fast->next)
   	{
@@ -15,3 +16,6 @@ slow=head;
 	  }
   	return false;
   }
+//FLOYD CYCLE DETECTION
+//O(n) time complexity
+//O(1) space complexity
