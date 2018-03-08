@@ -1,0 +1,17 @@
+void loop()
+{node *slow,*fast=new node;
+slow=head;
+  	fast=head;
+  	while(slow && fast && fast->next)
+  	{
+  		slow=slow->next;
+  		fast=fast->next;
+  		if(slow==fast)
+  		{
+  			return true;
+  			
+		  }
+		  
+	  }
+  	return false;
+  }
