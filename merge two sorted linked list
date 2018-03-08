@@ -1,0 +1,47 @@
+//RECURSIVE METHOD
+node *recursive_sorted_merge(node *a,node*b)
+  {
+  	node *result=NULL;
+  	if(a==NULL)
+  	return b;
+  	if(b==NULL)
+  	return a;
+  	if(a->data <= b->data)
+  	{
+  		result=a;
+  		result->next=recursive_sorted_merge(a->next,b);
+  		
+	  }
+	else
+	{
+		result=b;
+		result->next=sorted_merge(a,b->next);	
+	  }  
+	return result;  
+  }
+  //ITERATIVE METHOD
+    node *iterative_soreted_merge(node *a,node *b)
+  {
+  	if(a==NULL)return b;
+  	if(b==NULL)return a;
+  	node *result=NULL;
+  	if(a->data<b->data)
+  	result=a;
+  	else
+  	{
+  		result=b;
+  		b=a;
+  		a=head;
+	  }
+	while(a->next!=NULL)
+	{
+	if(a->next->data>b->data)
+	{
+		node temp=a->data;
+		a->data=b;
+		b=temp;
+	  }  
+	a=a->next;  
+  }
+  a->next=b;
+  return result;}
