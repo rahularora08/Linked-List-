@@ -1,0 +1,16 @@
+void move_to_front()
+{
+	if(head==NULL || head->next==NULL)
+	return ;
+	node *secondlast=NULL;
+	node *last=head;
+	while(last->next!=NULL)
+	{
+		secondlast=last;
+		last=last->next;
+	}
+	secondlast->next=NULL;
+	last->next=head;
+	head=last;
+}
+  
