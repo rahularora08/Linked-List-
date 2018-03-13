@@ -1,0 +1,15 @@
+void delete_alt()
+{
+	if(head==NULL)
+	return ;
+	node *pre=head;
+	node *cur=head->next;
+	while(pre!=NULL && cur!=NULL)
+	{
+		pre->next=cur->next;
+		pre=pre->next;
+		if (pre != NULL)
+            cur = pre->next;
+	}
+}
+  
