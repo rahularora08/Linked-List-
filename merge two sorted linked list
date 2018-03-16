@@ -37,8 +37,8 @@ node *recursive_sorted_merge(node *a,node*b)
 	{
 	if(a->next->data>b->data)
 	{
-		node temp=a->data;
-		a->data=b;
+		node temp=a->next;
+		a->next=b;
 		b=temp;
 	  }  
 	a=a->next;  
